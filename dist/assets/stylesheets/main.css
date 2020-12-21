@@ -1,0 +1,30 @@
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.playfair-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  color: #fff;
+  background-color: #000;
+}
+
+header,
+footer {
+  height: 80px;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 1fr;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), 
+  url('../images/background.jpg') center center no-repeat;
+  background-size: 1440px 1024px;
+}
