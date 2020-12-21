@@ -20,7 +20,7 @@ footer {
   height: 80px;
 }
 
-.content {
+#content {
   display: grid;
   grid-template-rows: 100vh;
   grid-template-columns: 1fr;
