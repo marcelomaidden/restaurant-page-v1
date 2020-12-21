@@ -1,5 +1,7 @@
 import home from './home';
 import about from './about';
+import contact from './contact';
+import create_anchor from './create_anchor';
 
 const home_click = () => {
   home();
@@ -10,17 +12,9 @@ const about_click = () => {
   about();
 }
 
-const create_anchor = (text) => {
-  let anchor = document.createElement('li');
-  let anchor_link = document.createElement('a');
-  anchor_link.setAttribute('href', "#");
-  anchor_link.setAttribute('data-id', text);
-  anchor_link.innerText = text;
-  anchor_link.setAttribute('class', 'nav-link active');
-  anchor.appendChild(anchor_link);
-  anchor.setAttribute('class', 'nav-item');
-
-  return anchor;
+const contact_click = () => {
+  console.log('clicked here')
+  contact();
 }
 
 const page_load = () => {
@@ -32,9 +26,9 @@ const page_load = () => {
   let nav = document.createElement('ul');
   nav.setAttribute('class', 'poppins nav nav-tabs');
 
-  nav.appendChild(create_anchor('Home'));
-  nav.appendChild(create_anchor('About'));
-  nav.appendChild(create_anchor('Recipes'));
+  nav.appendChild(create_anchor('Home', 'nav-item'));
+  nav.appendChild(create_anchor('About', 'nav-item'));
+  nav.appendChild(create_anchor('Contact', 'nav-item'));
 
   header.appendChild(nav);
 
@@ -44,8 +38,8 @@ const page_load = () => {
   let about_anchor = document.querySelector('a[data-id="About"]');
   about_anchor.addEventListener('click', about_click);
 
-  let recipes_anchor = document.querySelector('a[data-id="Recipes"]');
-  recipes_anchor.addEventListener('click', home_click);
+  let contact_anchor = document.querySelector('a[data-id="Contact"]');
+  contact_anchor.addEventListener('click', contact_click);
 }
  
 home(); 
