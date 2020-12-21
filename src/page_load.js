@@ -1,7 +1,14 @@
+import home from './home';
+
+const home_click = () => {
+  home();
+}
+
 const create_anchor = (text) => {
   let anchor = document.createElement('li');
   let anchor_link = document.createElement('a');
   anchor_link.setAttribute('href', "#");
+  anchor_link.setAttribute('data-id', text);
   anchor_link.innerText = text;
   anchor_link.setAttribute('class', 'nav-link active');
   anchor.appendChild(anchor_link);
@@ -10,9 +17,8 @@ const create_anchor = (text) => {
   return anchor;
 }
 
-const header = () => {
-  let content = document.querySelector('div#content');
-  let header = document.createElement('header');
+const page_load = () => {
+  let header = document.querySelector('header');
   let header_h4 = document.createElement('h4');
   header_h4.innerText = 'Restaurante Microverse';
   header_h4.setAttribute('class', 'd-flex justify-content-between align-items-center px-5');
@@ -26,7 +32,16 @@ const header = () => {
 
   header.appendChild(nav);
 
-  content.appendChild(header);
+  let home_anchor = document.querySelector('a[data-id="Home"]');
+  home_anchor.addEventListener('click', home_click);
+
+  let about_anchor = document.querySelector('a[data-id="About"]');
+  about_anchor.addEventListener('click', home_click);
+
+  let recipes_anchor = document.querySelector('a[data-id="Recipes"]');
+  recipes_anchor.addEventListener('click', home_click);
 }
  
-export { header }
+home(); 
+
+export default page_load;

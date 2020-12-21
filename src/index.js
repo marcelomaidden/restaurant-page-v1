@@ -1,3 +1,3 @@
-import { header } from './page-load';
+import page_load from './page_load';
 
-header();
+page_load();
