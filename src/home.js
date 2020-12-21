@@ -3,7 +3,7 @@ const home = () => {
   content.innerHTML = '';
 
   let div = document.createElement('div');
-  div.setAttribute('class', 'd-flex home flex-column poppins p-3');
+  div.setAttribute('class', 'd-flex article flex-column poppins p-3');
   let p1 = document.createElement('p');
   p1.innerText = 'Microverse Restaurant is one of the most awarded restaurants in the world';
   div.appendChild(p1);

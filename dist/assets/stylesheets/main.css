@@ -12,13 +12,19 @@
 
 body {
   color: #fff;
-  background-color: #000;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), 
+  url('../images/background.jpg') center center no-repeat;
+  background-size: 1440px 1024px;
   grid-template-rows: 10% 80% 10%;
 }
 
 header,
 footer {
   height: 80px;
+}
+
+footer {
+  background-color: #000;
 }
 
 main {
@@ -35,9 +41,16 @@ body,
   min-height: 80vh;
   grid-template-rows: 100px 300px;
   grid-template-columns: 1fr;
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), 
-  url('../images/background.jpg') center center no-repeat;
-  background-size: 1440px 1024px;
+}
+
+.article {
+  width: 500px;
+  line-height: 1.2;
+  padding: 20px;
+}
+
+p {
+  margin-bottom: 8px;
 }
 
 .meals {
@@ -48,5 +61,5 @@ body,
 }
 
 .image-meal {
-  height: 100%;
+  width: 100%;
 }

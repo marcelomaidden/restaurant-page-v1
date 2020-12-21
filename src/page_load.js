@@ -1,7 +1,13 @@
 import home from './home';
+import about from './about';
 
 const home_click = () => {
   home();
+}
+
+const about_click = () => {
+  console.log('clicked here')
+  about();
 }
 
 const create_anchor = (text) => {
@@ -36,7 +42,7 @@ const page_load = () => {
   home_anchor.addEventListener('click', home_click);
 
   let about_anchor = document.querySelector('a[data-id="About"]');
-  about_anchor.addEventListener('click', home_click);
+  about_anchor.addEventListener('click', about_click);
 
   let recipes_anchor = document.querySelector('a[data-id="Recipes"]');
   recipes_anchor.addEventListener('click', home_click);
