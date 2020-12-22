@@ -16,13 +16,13 @@ const menu = () => {
   const divImages = document.createElement('div');
   divImages.setAttribute('class', 'meals');
   const meal1 = document.createElement('img');
-  meal1.setAttribute('src', '../dist/assets/images/dan-gold.jpg');
+  meal1.setAttribute('src', './assets/images/dan-gold.jpg');
   meal1.setAttribute('alt', 'Salads');
   meal1.setAttribute('class', 'image-meal');
   divImages.appendChild(meal1);
 
   const meal2 = document.createElement('img');
-  meal2.setAttribute('src', '../dist/assets/images/rachel-park.jpg');
+  meal2.setAttribute('src', './assets/images/rachel-park.jpg');
   meal2.setAttribute('alt', 'Desserts');
   meal2.setAttribute('class', 'image-meal');
   divImages.appendChild(meal2);
