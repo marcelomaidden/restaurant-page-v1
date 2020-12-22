@@ -1,4 +1,4 @@
-const home = () => {
+const menu = () => {
   const content = document.querySelector('div#content');
   content.innerHTML = '';
 
@@ -30,4 +30,4 @@ const home = () => {
   content.appendChild(divImages);
 };
 
-export default home;
+export default menu;

@@ -1,10 +1,10 @@
-import home from './home';
+import menu from './menu';
 import about from './about';
 import contact from './contact';
 import createAnchor from './create_anchor';
 
-const homeClick = () => {
-  home();
+const menuClick = () => {
+  menu();
 };
 
 const aboutClick = () => {
@@ -24,14 +24,14 @@ const pageLoad = () => {
   const nav = document.createElement('ul');
   nav.setAttribute('class', 'poppins nav nav-tabs');
 
-  nav.appendChild(createAnchor('Home', 'nav-item'));
+  nav.appendChild(createAnchor('Menu', 'nav-item'));
   nav.appendChild(createAnchor('About', 'nav-item'));
   nav.appendChild(createAnchor('Contact', 'nav-item'));
 
   header.appendChild(nav);
 
-  const homeAnchor = document.querySelector('a[data-id="Home"]');
-  homeAnchor.addEventListener('click', homeClick);
+  const menuAnchor = document.querySelector('a[data-id="Menu"]');
+  menuAnchor.addEventListener('click', menuClick);
 
   const aboutAnchor = document.querySelector('a[data-id="About"]');
   aboutAnchor.addEventListener('click', aboutClick);
@@ -40,6 +40,6 @@ const pageLoad = () => {
   contactAnchor.addEventListener('click', contactClick);
 };
 
-home();
+menu();
 
 export default pageLoad;
