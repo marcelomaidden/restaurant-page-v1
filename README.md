@@ -46,6 +46,11 @@ To make any change,
 
 - Open related file by using text editor.
 
+## Usage
+
+  - Change directory to dist folder
+  - Open index.html on your preferred browser
+
 ## Author
 
 👤  **Marcelo Fernandes**
