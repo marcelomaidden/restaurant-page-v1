@@ -1,0 +1,65 @@
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.playfair-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  color: #fff;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), 
+  url('../images/background.jpg') center center no-repeat;
+  background-size: 1440px 1024px;
+  grid-template-rows: 10% 80% 10%;
+}
+
+header,
+footer {
+  height: 80px;
+}
+
+footer {
+  background-color: #000;
+}
+
+main {
+  min-height: 80vh;
+}
+
+#content, 
+body,
+.meals {
+  display: grid;
+}
+
+#content {
+  min-height: 80vh;
+  grid-template-rows: 100px 300px;
+  grid-template-columns: 1fr;
+}
+
+.article {
+  width: 500px;
+  line-height: 1.2;
+  padding: 20px;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+.meals {
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 100px;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.image-meal {
+  width: 100%;
+}
