@@ -1,47 +1,45 @@
 import home from './home';
 import about from './about';
 import contact from './contact';
-import create_anchor from './create_anchor';
+import createAnchor from './create_anchor';
 
-const home_click = () => {
+const homeClick = () => {
   home();
-}
+};
 
-const about_click = () => {
-  console.log('clicked here')
+const aboutClick = () => {
   about();
-}
+};
 
-const contact_click = () => {
-  console.log('clicked here')
+const contactClick = () => {
   contact();
-}
+};
 
-const page_load = () => {
-  let header = document.querySelector('header');
-  let header_h4 = document.createElement('h4');
-  header_h4.innerText = 'Restaurante Microverse';
-  header_h4.setAttribute('class', 'd-flex justify-content-between align-items-center px-5');
+const pageLoad = () => {
+  const header = document.querySelector('header');
+  const headerH4 = document.createElement('h4');
+  headerH4.innerText = 'Restaurante Microverse';
+  headerH4.setAttribute('class', 'd-flex justify-content-between align-items-center px-5');
 
-  let nav = document.createElement('ul');
+  const nav = document.createElement('ul');
   nav.setAttribute('class', 'poppins nav nav-tabs');
 
-  nav.appendChild(create_anchor('Home', 'nav-item'));
-  nav.appendChild(create_anchor('About', 'nav-item'));
-  nav.appendChild(create_anchor('Contact', 'nav-item'));
+  nav.appendChild(createAnchor('Home', 'nav-item'));
+  nav.appendChild(createAnchor('About', 'nav-item'));
+  nav.appendChild(createAnchor('Contact', 'nav-item'));
 
   header.appendChild(nav);
 
-  let home_anchor = document.querySelector('a[data-id="Home"]');
-  home_anchor.addEventListener('click', home_click);
+  const homeAnchor = document.querySelector('a[data-id="Home"]');
+  homeAnchor.addEventListener('click', homeClick);
 
-  let about_anchor = document.querySelector('a[data-id="About"]');
-  about_anchor.addEventListener('click', about_click);
+  const aboutAnchor = document.querySelector('a[data-id="About"]');
+  aboutAnchor.addEventListener('click', aboutClick);
 
-  let contact_anchor = document.querySelector('a[data-id="Contact"]');
-  contact_anchor.addEventListener('click', contact_click);
-}
- 
-home(); 
+  const contactAnchor = document.querySelector('a[data-id="Contact"]');
+  contactAnchor.addEventListener('click', contactClick);
+};
 
-export default page_load;
+home();
+
+export default pageLoad;
