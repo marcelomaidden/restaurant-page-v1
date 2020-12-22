@@ -1,4 +1,4 @@
-<h3 align="center">Library - Javascript</h3>
+<h3 align="center">Restaurant - Javascript</h3>
 
 <div align="center">
 
